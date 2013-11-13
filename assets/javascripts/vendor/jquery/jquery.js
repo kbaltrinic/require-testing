@@ -12,6 +12,8 @@
  * Date: Thu Aug 30 2012 17:17:22 GMT-0400 (Eastern Daylight Time)
  */
 (function( window, undefined ) {
+_NUM = window.MOD_NUM = window.MOD_NUM ? window.MOD_NUM+1 : 1;
+console.log("JQuery init: " + _NUM);
 var
 	// A central reference to the root jQuery(document)
 	rootjQuery,
@@ -43,6 +45,7 @@ var
 		// The jQuery object is actually just the init constructor 'enhanced'
 		return new jQuery.fn.init( selector, context, rootjQuery );
 	},
+
 
 	// Used for matching numbers
 	core_pnum = /[\-+]?(?:\d*\.|)\d+(?:[eE][\-+]?\d+|)/.source,
@@ -91,6 +94,8 @@ var
 
 	// [[Class]] -> type pairs
 	class2type = {};
+
+jQuery._NUM = _NUM;
 
 jQuery.fn = jQuery.prototype = {
 	constructor: jQuery,
