@@ -1,5 +1,10 @@
-define ['vendor/squire/Squire', 'data/mock-data'], (Squire, mock_data) ->
+define [
+  'vendor/squire/Squire'
+  'jquery'
+  'data/mock-data'
+  ], (Squire, $, mock_data) ->
   injector = new Squire()
+  injector.mock 'jquery', -> $  #Not sure why but not wrapping in a function causes problems, just try it.
   injector.mock 'data/real-data', mock_data
   injector.require ['app/example-view'], (View) ->
 

@@ -1,6 +1,9 @@
-define(['vendor/squire/Squire', 'data/mock-data'], function(Squire, mock_data) {
+define(['vendor/squire/Squire', 'jquery', 'data/mock-data'], function(Squire, $, mock_data) {
   var injector;
   injector = new Squire();
+  injector.mock('jquery', function() {
+    return $;
+  });
   injector.mock('data/real-data', mock_data);
   return injector.require(['app/example-view'], function(View) {
     return describe('Testing with Squire only', function() {
