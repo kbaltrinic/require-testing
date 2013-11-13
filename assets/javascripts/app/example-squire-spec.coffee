@@ -1,7 +1,7 @@
 define ['vendor/squire/Squire', 'data/mock-data'], (Squire, mock_data) ->
   injector = new Squire()
   injector.mock 'data/real-data', mock_data
-  injector.require ['jquery','app/example-view'], ($, View) ->
+  injector.require ['app/example-view'], (View) ->
 
     describe 'Testing with Squire only', ->
 

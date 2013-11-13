@@ -1,4 +1,4 @@
-define ['jquery', 'app/example-view'], ($,View) ->
+define ['app/example-view'], (View) ->
   
   describe 'Testing with RequireJS only', ->
     view = null
