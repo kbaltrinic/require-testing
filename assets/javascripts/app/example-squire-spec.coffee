@@ -5,6 +5,7 @@ define [
   ], (Squire, $, mock_data) ->
   injector = new Squire()
   injector.mock 'jquery', -> $  #Not sure why but not wrapping in a function causes problems, just try it.
+  injector.mock 'vendor/jquery.blockui', undefined
   injector.mock 'data/real-data', mock_data
   injector.require ['app/example-view'], (View) ->
 

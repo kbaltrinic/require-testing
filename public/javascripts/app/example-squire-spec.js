@@ -4,6 +4,7 @@ define(['vendor/squire/Squire', 'jquery', 'data/mock-data'], function(Squire, $,
   injector.mock('jquery', function() {
     return $;
   });
+  injector.mock('vendor/jquery.blockui', void 0);
   injector.mock('data/real-data', mock_data);
   return injector.require(['app/example-view'], function(View) {
     return describe('Testing with Squire only', function() {
