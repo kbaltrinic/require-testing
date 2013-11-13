@@ -5,4 +5,6 @@ define ['jquery','vendor/jquery.blockui'], ($) ->
     render: (element) ->
       $(element).append "<div>Just proving the $.blockUI is defined: $.blockUI = #{$.blockUI}</div>"
     
+    getBlockUI: -> $.blockUI
+
   ExampleView
